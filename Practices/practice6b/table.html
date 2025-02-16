@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Class Schedule</title>
+    <style>
+        .table-container {
+            text-align: center;
+        }
+        table {
+            width: 550px;
+            margin: auto;
+            border: 1px solid black;
+            cellspacing: 0;
+            cellpadding: 5px;
+        }
+        caption {
+            background-color: #003300;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .colgroup-1 {
+            background-color: #CCCCCC;
+            width: 25%;
+        }
+        .colgroup-2 {
+            background-color: #99FF66;
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <caption>My Class Schedule</caption>
+            <colgroup class="colgroup-1"></colgroup>
+            <colgroup class="colgroup-2" span="5"></colgroup>
+            <thead>
+                <tr>
+                    <th>Courses</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INFO 2420</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+                <tr>
+                    <td>MATH 1055</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+                <tr>
+                    <td>INFO 1200</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+                <tr>
+                    <td>IT 1600</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+                <tr>
+                    <td>INFO 2410</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+                <tr>
+                    <td>AERO 143R</td>
+                    <td></td>
+                    <td>6-7 PM</td>
+                    <td></td>
+                    <td>6-7 PM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>AERO 2010</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>11-1 PM</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
