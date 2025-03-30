@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backyard Birds - Graphics</title>
+  <style type="text/css">
+    #thumbs, #image {
+      width: 900px;
+      text-align: center;
+      margin: 0 auto;
+      color: #000;
+    }
+
+    #thumbs {
+      margin-top: 10px;
+    }
+
+    #thumbs img {
+      border: solid 1px #000;
+      margin: 5px;
+    }
+
+    #image {
+      height: 500px;
+    }
+
+    .instructions {
+      font-style: italic;
+    }
+  </style>
+  <script type="text/javascript">
+    const imgArray = [
+      'Heronlg.jpg',
+      'Owl1lg.jpg',
+      'Pigeonlg.jpg',
+      'Quaillg.jpg'
+    ];
+
+    const titleArray = [
+      'Heron',
+      'Owl',
+      'Pigeon',
+      'Quail'
+    ];
+
+    const imgPath = "images/fullsize/";
+
+    function swapImage(imgID) {
+      const theImage = document.getElementById('theImage');
+      const textDiv = document.getElementById('bottomText');
+
+      theImage.src = imgPath + imgArray[imgID];
+      theImage.alt = titleArray[imgID];
+      textDiv.innerHTML = titleArray[imgID];
+    }
+
+    function preloadImages() {
+      for (let i = 0; i < imgArray.length; i++) {
+        const tmpImg = new Image();
+        tmpImg.src = imgPath + imgArray[i];
+      }
+    }
+  </script>
+</head>
+<body onload="preloadImages()">
+  <div align="center">
+
+    <!-- Print Button Rollover -->
+    <div>
+      <a href="#" onmouseover="document.getElementById('print').src='images/print2.png';" onmouseout="document.getElementById('print').src='images/print1.jpg';">
+        <img src="images/print1.jpg" alt="Print Page" width="200" height="50" id="print" />
+      </a>
+    </div>
+
+    <!-- Logo Rollover -->
+    <div>
+      <a href="#" onmouseover="document.getElementById('logo').src='images/backyard birds logo2.jpg';" onmouseout="document.getElementById('logo').src='images/backyard birds logo.png';">
+        <img src="images/backyard birds logo.png" alt="Logo" id="logo" width="133" height="126" />
+      </a>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <!-- Thumbnail Swaps -->
+    <div id="thumbs">
+      <img src="images/thumbnail/HeronSm.jpg" alt="Heron" onmouseover="swapImage(0);" />
+      <img src="images/thumbnail/Owl1Sm.jpg" alt="Owl" onmouseover="swapImage(1);" />
+      <img src="images/thumbnail/PigeonSm.jpg" alt="Pigeon" onmouseover="swapImage(2);" />
+      <img src="images/thumbnail/QuailSm.jpg" alt="Quail" onmouseover="swapImage(3);" />
+    </div>
+
+    <div id="image">
+      <img id="theImage" src="images/fullsize/Heronlg.jpg" alt="Great Blue Heron" />
+      <h3 id="bottomText">Great Blue Heron</h3>
+    </div>
+
+    <!-- Background Image Preview -->
+    <img src="images/2colback.png" alt="Two Column Background" />
+
+    <br /><br /><br /><br />
+
+  </div>
+
+  <!-- Validator Badge -->
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer">
+      <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+    </a>
+  </p>
+</body>
+</html>
