@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backyard Birds</title>
+  <link rel="stylesheet" href="mystyles.css">
+  <script src="myscripts.js"></script>
+</head>
+
+<body onload="preloadImages()">
+  <div id="container">
+
+    <!-- HEADER -->
+    <header>
+
+      <!-- NAVIGATION BAR -->
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Tributes.html">Tributes</a>
+        <a href="Survey.html">Survey</a>
+        <a href="Favorites.html">Favorites</a>
+      </nav>
+
+      <!-- Logo and Banner -->
+      <a href="#" onmouseover="document.getElementById('logoImg').src='Images/backyard birds logo2.jpg';"
+         onmouseout="document.getElementById('logoImg').src='Images/backyard birds logo.png';">
+        <img src="Images/backyard birds logo.png" alt="Logo" id="logoImg">
+      </a>
+
+      <img src="Images/back yard birds banner.png" alt="Banner" id="bannerImg">
+    </header>
+
+    <!-- SECTION -->
+    <section>
+      <article>
+        <h1>Welcome to Backyard Birds of Utah</h1>
+        <p>Welcome to Backyard Birds of Utah!  
+        If you love birdwatching like we do, you should enjoy looking around this site.  
+        Take a look at our Bird Profiles and take the opportunity to complete our survey.</p>
+
+        <h2>Gallery</h2>
+        <div id="thumbs">
+          <img src="Images/thumbnail/HeronSm.jpg" alt="Heron" onmouseover="swapImage(0);">
+          <img src="Images/thumbnail/Owl1Sm.jpg" alt="Owl" onmouseover="swapImage(1);">
+          <img src="Images/thumbnail/PigeonSm.jpg" alt="Pigeon" onmouseover="swapImage(2);">
+          <img src="Images/thumbnail/QuailSm.jpg" alt="Quail" onmouseover="swapImage(3);">
+        </div>
+
+        <div id="image">
+          <img id="theImage" src="Images/fullsize/Heronlg.jpg" alt="Heron">
+          <h3 id="bottomText">Heron</h3>
+        </div>
+
+        <h2>Mini Tribute</h2>
+        <img src="Images/RobinSm.jpg" alt="Robin" class="left-aligned" width="200">
+        <p class="text-section">
+          Dave Jorgensen is a lifelong bird lover in northern Utah. As a city worker, he finds peace in Bart Jones' stunning photography of local birds.  
+          The vivid colors and unique species bring Utah's natural beauty into his workplace every day.  
+          <a href="Tributes.html">more >></a>
+        </p>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p><a href="mailto:your@email.com">Webmaster</a></p>
+      <p>This web site has been created solely for educational purposes.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
